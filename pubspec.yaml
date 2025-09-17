@@ -17,6 +17,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   hive_flutter: ^1.1.0
   hive_generator: ^2.0.1
+  flutter_bloc: ^9.1.1
+  intl: ^0.20.2
+  equatable: ^2.0.7
+  http: ^1.5.0
+  flutter_dotenv: ^6.0.0
 
 
 dev_dependencies:
