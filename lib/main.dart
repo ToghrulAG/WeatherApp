@@ -8,8 +8,13 @@ Future<void> main() async {
   await Hive.initFlutter();
 
   Hive.registerAdapter(CityAdapter());
-
+  //
+  // await Hive.deleteBoxFromDisk('cities');
+  // await Hive.deleteBoxFromDisk('weather_cache');
+  //
   await Hive.openBox<City>('cities');
+
+  await Hive.openBox('weather_cache'); // For offline mode
 
   runApp(const WeatherApp());
 }
@@ -48,11 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _addTestCity() {
     final city = City(
-      id: DateTime.now().millisecondsSinceEpoch,
+      country: 'Azerbaijan',
       name: 'Baku',
       lat: 40.4093,
       lon: 49.8671,
-      createdAt: DateTime.now(),
+      timezone: 'Asia/Baku',    
       order: _cityBox.length,
     );
 
