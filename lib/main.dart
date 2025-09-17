@@ -1,4 +1,4 @@
-import './models/city.dart';
+import './src/data/models/city.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
