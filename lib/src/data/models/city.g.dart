@@ -21,7 +21,7 @@ class CityAdapter extends TypeAdapter<City> {
       name: fields[1] as String,
       lat: fields[2] as double,
       lon: fields[3] as double,
-      createdAt: fields[4] as DateTime,
+      timezone: fields[4] as String,
       order: fields[5] as int,
     );
   }
@@ -39,7 +39,7 @@ class CityAdapter extends TypeAdapter<City> {
       ..writeByte(3)
       ..write(obj.lon)
       ..writeByte(4)
-      ..write(obj.createdAt)
+      ..write(obj.timezone)
       ..writeByte(5)
       ..write(obj.order);
   }
