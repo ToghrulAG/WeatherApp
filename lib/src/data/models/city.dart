@@ -17,7 +17,7 @@ class City extends HiveObject {
   final double lon;
 
   @HiveField(4)
-  final DateTime createdAt;
+  final String timezone; 
 
   @HiveField(5)
   final int order;
@@ -27,8 +27,9 @@ class City extends HiveObject {
     required this.name,
     required this.lat,
     required this.lon,
-    required this.createdAt,
-    required this.order
+    required this.timezone,
+    this.order = 0 
+    
   });
 }
 
